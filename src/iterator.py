@@ -19,12 +19,12 @@ for j in cycle_fruits:
     print(j)  # Infinite loop
 
 # We want to find the day when David is drinking iced_tea with 'cherry'
-
 condition_not_met = True
 number_days = 0
 idx_fruits = 0
 idx_drinks = 0
 
+# No cycle
 while condition_not_met:
 
     fruit = my_fruits[idx_fruits]
@@ -42,7 +42,9 @@ while condition_not_met:
     if idx_drinks == len(my_drinks):
         idx_drinks = 0
 
+print('The day is:', number_days)
 
+# Cycle
 while condition_not_met:
     fruit = next(cycle_fruits)
     drink = next(cycle_drinks)
