@@ -4,21 +4,21 @@ my_fruits = ["apple", "banana", "cherry", "strawberry", "mango"]
 my_drinks = ['coca', 'fanta', 'pepsi', 'juice', 'water', 'milk', 'iced_tea']
 
 
-iterator_fruits = iter(my_fruits)
+iterator_fruits = iter(my_fruits)  # Creation of an iterator
 
-print(next(iterator_fruits))
-print(next(iterator_fruits))
+print(next(iterator_fruits))  # Display the first
+print(next(iterator_fruits))  # Display next, etc...
 print(next(iterator_fruits))
 print(next(iterator_fruits))
 print(next(iterator_fruits))
 
-cycle_fruits = cycle(my_fruits)
+cycle_fruits = cycle(my_fruits)  # Creation of a cycle
 cycle_drinks = cycle(my_drinks)
 
 for j in cycle_fruits:
-    print(j)
+    print(j)  # Infinite loop
 
-# We want to find when David is drinking iced_tea with 'cherry'
+# We want to find the day when David is drinking iced_tea with 'cherry'
 
 condition_not_met = True
 number_days = 0

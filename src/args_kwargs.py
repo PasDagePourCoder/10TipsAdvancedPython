@@ -12,9 +12,12 @@ add_numbers(5, 10, 15, 20)
 
 
 def generate_pokemon(**kwargs):
+    d = dict()
     for key, value in kwargs.items():
         print("{}: {}".format(key, value))
+        d[key] = value
+    return d
 
-generate_pokemon(color='blue', level=15, element='water')
-generate_pokemon(color='red')
+a = generate_pokemon(color='blue', level=15, element='water')
+b = generate_pokemon(color='red')
 

@@ -14,13 +14,6 @@ def go_fast(a):  # Function is compiled and runs in machine code
     return a + trace
 
 
-def go_normal_python(a):  # Function is compiled and runs in machine code
-    trace = 0.0
-    for i in range(a.shape[0]):
-        trace += np.tanh(a[i, i])
-    return a + trace
-
-
 # DO NOT REPORT THIS... COMPILATION TIME IS INCLUDED IN THE EXECUTION TIME!
 start = time.time()
 go_fast(x)
@@ -32,6 +25,12 @@ start = time.time()
 go_fast(x)
 end = time.time()
 print("Elapsed (after compilation) = %s" % (end - start))
+
+def go_normal_python(a):  # Function is compiled and runs in machine code
+    trace = 0.0
+    for i in range(a.shape[0]):
+        trace += np.tanh(a[i, i])
+    return a + trace
 
 start = time.time()
 go_normal_python(x)

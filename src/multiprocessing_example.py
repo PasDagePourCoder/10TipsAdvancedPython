@@ -15,8 +15,7 @@ def main():
 
     print(f'starting computations on {cpu_count()} cores')
 
-    values = (2, 4, 6, 8, 64, 128, 256, 512,
-              512, 800, 1600, 260, 125, 563, 124, 89)
+    values = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ,16)
 
     with Pool() as pool:
         res = pool.map(square, values)
@@ -43,3 +42,32 @@ def example_grid_search():
     GridSearchCV(estimator=svc,
                  param_grid={'C': [1, 10], 'kernel': ('linear', 'rbf')},
                  n_jobs=-1)  # Tell to use all processors
+
+start = timer()
+
+print(f'starting computations on {cpu_count()} cores')
+
+values = (1, 2, 3, 4, 5, 6, 7, 8)
+
+with Pool() as pool:
+    res = pool.map(square, values)
+    print(res)
+
+end = timer()
+print(f'elapsed time: {end - start}')
+
+
+
+start = timer()
+
+print(f'starting computations on {cpu_count()} cores')
+
+values = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+
+with Pool() as pool:
+    res = pool.map(square, values)
+    print(res)
+
+end = timer()
+print(f'elapsed time: {end - start}')
+
